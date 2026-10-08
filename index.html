@@ -1,1 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic personal homepage of Zhan Zhang">
+  <title>Zhan Zhang | Academic Homepage</title>
+  <style>
+    :root { --ink:#252b32; --muted:#535d69; --blue:#003399; --nav:#343a40; --rule:#dedede; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; padding-top:56px; background:#fff; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; font-size:17px; line-height:1.58; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { color:var(--blue); text-decoration:underline; }
+    .navbar { height:56px; position:fixed; z-index:50; top:0; left:0; right:0; background:var(--nav); color:#fff; }
+    .nav-inner { max-width:1110px; height:100%; padding:0 17px; margin:auto; display:flex; align-items:center; gap:24px; }
+    .brand { color:white; font-size:20px; white-space:nowrap; }
+    .brand:hover { color:white; }
+    .nav-links { display:flex; gap:21px; align-items:center; margin-left:auto; }
+    .nav-links a { color:#cbd0d5; font-size:15px; }
+    .nav-links a:hover, .nav-links a.active { color:#fff; text-decoration:none; }
+    .container { max-width:1080px; padding:0 16px; margin:0 auto; }
+    .profile { display:grid; grid-template-columns:25% 41% 34%; margin-top:20px; }
+    .profile > div { padding:25px 34px 0 0; }
+    .portrait { display:block; width:220px; max-width:100%; height:240px; border-radius:4px; object-fit:cover; object-position:center top; background:#e8ecf1; }
+    h1 { font-size:31px; line-height:1.2; font-weight:500; margin:0 0 25px; }
+    .details p, .interests p { margin:0 0 14px; }
+    .interests b { font-weight:650; }
+    .bio { margin:26px 0 28px; }
+    .bio p { margin:0 0 17px; text-align:left; }
+    .section-title { margin:39px 0 8px; font-size:25px; font-weight:500; line-height:1.4; scroll-margin-top:85px; }
+    .section-title .secondary { font-size:17px; font-weight:400; }
+    hr { border:0; border-top:1px solid var(--rule); margin:16px 0; }
+    .publication { display:grid; grid-template-columns:25% 75%; min-height:153px; }
+    .publication-art { position:relative; padding:13px 25px 8px 0; }
+    .publication-art .tag { display:inline-block; position:absolute; top:1px; left:-8px; z-index:2; padding:1px 8px; color:#fff; background:#00369f; font-size:12px; line-height:1.6; border-radius:2px; }
+    .teaser { width:100%; display:block; aspect-ratio:1.48; border:1px solid #e6e8ed; border-radius:3px; overflow:hidden; background:#eef2f7; }
+    .teaser svg { width:100%; height:100%; display:block; }
+    img.teaser { object-fit:contain; }
+    .publication-body { padding:3px 0 10px; }
+    .pub-title { font-weight:650; line-height:1.45; color:#202326; }
+    .venue { display:block; margin:1px 0; }
+    .pub-links a { margin-right:9px; white-space:nowrap; }
+    .bottom-section { margin-top:33px; }
+    footer { padding:30px 0 38px; font-size:13px; color:#7b8189; }
+    @media (max-width:790px) {
+      body { padding-top:0; font-size:16px; }
+      .navbar { height:auto; position:sticky; }
+      .nav-inner { flex-wrap:wrap; padding:11px 16px; gap:5px 20px; }
+      .nav-links { margin-left:0; width:100%; gap:16px; flex-wrap:wrap; }
+      .profile { grid-template-columns:185px 1fr; }
+      .profile > div { padding:20px 16px 0 0; }
+      .interests { grid-column:1 / -1; padding-top:15px !important; }
+      .portrait { max-height:230px; }
+      .bio { margin-top:20px; }
+      .publication { grid-template-columns:31% 69%; }
+      .publication-art { padding-right:16px; }
+    }
+    @media (max-width:520px) {
+      .profile { grid-template-columns:1fr; }
+      .profile > div { padding:20px 0 0 0; }
+      .portrait { width:185px; height:210px; }
+      .details h1 { margin-bottom:13px; }
+      .publication { grid-template-columns:1fr; }
+      .publication-art { max-width:270px; padding-bottom:12px; }
+      .section-title { font-size:22px; }
+      .section-title .secondary { display:block; padding-top:5px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- EDIT 1: Change the navigation labels and links here, if needed. -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="#home">Zhan Zhang</a>
+      <div class="nav-links">
+        <a class="active" href="#home">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main id="home" class="container">
+    <section class="profile" aria-label="Profile">
+      <div>
+        <!-- EDIT 2: Replace this GitHub avatar URL with your own file, e.g. files/profile.jpg -->
+        <img class="portrait" src="https://github.com/Zhan-Zhang-AI.png?size=440" alt="Portrait of Zhan Zhang" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22440%22%20height%3D%22480%22%20viewBox%3D%220%200%20440%20480%22%3E%3Crect%20width%3D%22440%22%20height%3D%22480%22%20fill%3D%22%23e8edf3%22%2F%3E%3Ccircle%20cx%3D%22220%22%20cy%3D%22172%22%20r%3D%2279%22%20fill%3D%22%23acbccb%22%2F%3E%3Cpath%20d%3D%22M56%20472c8-112%2077-182%20164-182s156%2070%20164%20182%22%20fill%3D%22%23acbccb%22%2F%3E%3Ctext%20x%3D%22220%22%20y%3D%22440%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2227%22%20text-anchor%3D%22middle%22%20fill%3D%22%234b647b%22%3EAdd%20your%20photo%3C%2Ftext%3E%3C%2Fsvg%3E'">
+      </div>
+      <div class="details">
+        <!-- EDIT 3: Replace name, position, school and affiliations. -->
+        <h1>Zhan Zhang</h1>
+        <p>Researcher<br><a href="https://www.whu.edu.cn/" target="_blank" rel="noopener">Wuhan University</a></p>
+        <p><a href="https://github.com/Zhan-Zhang-AI" target="_blank" rel="noopener">GitHub Profile</a><br>Computer Vision &amp; Artificial Intelligence</p>
+      </div>
+      <div class="interests" id="contact">
+        <!-- EDIT 4: Replace research areas, email and profile URLs. -->
+        <p><b>Research Interests:</b><br>Computer Vision<br>Remote Sensing AI<br>Multimodal Learning<br>Efficient Vision-Language Models</p>
+        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a><br>
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a> /
+          <a href="https://github.com/Zhan-Zhang-AI" target="_blank" rel="noopener">GitHub</a><br>
+          <a href="#about">Biography</a> / <a href="#awards">CV</a>
+        </p>
+      </div>
+    </section>
 
+    <section class="bio" id="about" aria-label="Biography">
+      <!-- EDIT 5: Write your real academic biography here. The current text is a demonstration. -->
+      <p>I am a researcher interested in computer vision, remote sensing, and multimodal artificial intelligence. My research focuses on the development of effective and efficient vision-language models for understanding complex visual scenes.</p>
+      <p>My current interests include remote sensing foundation models, multimodal reasoning, and efficient learning. I am also exploring the connections between visual understanding, world models, and embodied AI.</p>
+    </section>
+
+    <section id="publications" aria-label="Highlighted publications">
+      <h2 class="section-title">Highlighted Publications <span class="secondary">(<a href="#publications">Full List of Publications</a> and <a href="https://scholar.google.com/">Google Scholar</a>)</span></h2>
+      <hr>
+
+      <!-- EDIT 6: Each article below is one paper. Copy a complete <article> block to add a paper.
+           Demo figures and text must be replaced with actual publication information before public use. -->
+      <article class="publication">
+        <div class="publication-art">
+          <span class="tag">DEMO</span>
+          <div class="teaser" role="img" aria-label="Illustrative remote sensing teaser, not a real paper figure">
+            <svg viewBox="0 0 260 175" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="260" height="175" fill="#eef3f9"/>
+              <rect x="12" y="12" width="104" height="150" rx="3" fill="#d2e1e9"/>
+              <path d="M12 117 59 59 77 94 116 37 116 162H12" fill="#86a78d"/><path d="M13 133 49 107 68 119 116 68" fill="none" stroke="#e8f3f8" stroke-width="7"/>
+              <g fill="#fff" stroke="#97aabf"><rect x="133" y="26" width="108" height="32" rx="4"/><rect x="133" y="72" width="108" height="32" rx="4"/><rect x="133" y="118" width="108" height="32" rx="4"/></g>
+              <g fill="#2d5c91"><rect x="144" y="39" width="64" height="6" rx="3"/><rect x="144" y="85" width="77" height="6" rx="3"/><rect x="144" y="131" width="53" height="6" rx="3"/></g>
+              <path d="M117 87h13" stroke="#003399" stroke-width="3"/><path d="m126 82 6 5-6 5" fill="none" stroke="#003399" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="publication-body">
+          <div class="pub-title">Your Paper Title: Efficient Vision-Language Modeling for Remote Sensing</div>
+          <div><b>Zhan Zhang</b>, Coauthor One, Coauthor Two</div>
+          <span class="venue">Conference or Journal · Year</span>
+          <div class="pub-links"><a href="#publications">[Paper]</a><a href="#projects">[Project Page]</a><a href="https://github.com/Zhan-Zhang-AI">[Code]</a></div>
+        </div>
+      </article>
+      <hr>
+
+      <article class="publication">
+        <div class="publication-art">
+          <span class="tag">DEMO</span>
+          <div class="teaser" role="img" aria-label="Illustrative segmentation teaser, not a real paper figure">
+            <svg viewBox="0 0 260 175" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="260" height="175" fill="#f3f6fa"/>
+              <rect x="11" y="13" width="108" height="147" rx="3" fill="#afc7b2"/>
+              <path d="M11 112 37 77 62 104 86 44 119 66V160H11" fill="#648c88"/><path d="M18 15 38 44 31 69 63 91 87 122" fill="none" stroke="#dce9d6" stroke-width="10"/>
+              <rect x="141" y="13" width="108" height="147" rx="3" fill="#e8edf6"/><path d="M141 112 168 77 193 104 217 44 249 66V160H141" fill="#408e9c"/><path d="M148 15 168 44 161 69 193 91 217 122" fill="none" stroke="#8b6ab0" stroke-width="10"/>
+              <path d="M123 84h13" stroke="#003399" stroke-width="2"/><path d="m132 78 6 6-6 6" stroke="#003399" fill="none" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="publication-body">
+          <div class="pub-title">Your Second Paper Title: Remote Sensing Scene Understanding</div>
+          <div>Coauthor One, <b>Zhan Zhang</b>, Coauthor Three</div>
+          <span class="venue">Conference or Journal · Year</span>
+          <div class="pub-links"><a href="#publications">[Paper]</a><a href="#projects">[Project Page]</a><a href="https://github.com/Zhan-Zhang-AI">[Code]</a></div>
+        </div>
+      </article>
+      <hr>
+
+      <article class="publication">
+        <div class="publication-art">
+          <span class="tag">DEMO</span>
+          <div class="teaser" role="img" aria-label="Illustrative multimodal AI teaser, not a real paper figure">
+            <svg viewBox="0 0 260 175" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="260" height="175" fill="#f0f3f8"/><rect x="15" y="18" width="67" height="60" rx="4" fill="#bdcad9"/><circle cx="47" cy="42" r="15" fill="#8aa5bc"/>
+              <rect x="15" y="98" width="67" height="59" rx="4" fill="#c9d7bf"/><path d="M20 143 39 113 52 132 63 114 78 137" fill="#7b9c7b"/>
+              <path d="M92 54 111 82 92 119" stroke="#416b9b" stroke-width="3" fill="none"/><rect x="118" y="53" width="52" height="69" rx="8" fill="#dbe6f0" stroke="#a0bad2"/>
+              <g fill="#416b9b"><rect x="129" y="64" width="31" height="6" rx="3"/><rect x="129" y="78" width="31" height="6" rx="3"/><rect x="129" y="92" width="23" height="6" rx="3"/></g>
+              <path d="M173 87h17" stroke="#416b9b" stroke-width="3"/><path d="m187 82 5 5-5 5" fill="none" stroke="#416b9b" stroke-width="2"/><rect x="197" y="42" width="49" height="88" rx="8" fill="#b7cbe3"/>
+              <g fill="#f7f9fc"><rect x="207" y="56" width="30" height="5" rx="2"/><rect x="207" y="70" width="24" height="5" rx="2"/><rect x="207" y="84" width="28" height="5" rx="2"/><rect x="207" y="98" width="18" height="5" rx="2"/></g>
+            </svg>
+          </div>
+        </div>
+        <div class="publication-body">
+          <div class="pub-title">Your Third Paper Title: Multimodal Perception and Reasoning</div>
+          <div><b>Zhan Zhang</b>, Coauthor One, Coauthor Two</div>
+          <span class="venue">Conference or Journal · Year</span>
+          <div class="pub-links"><a href="#publications">[Paper]</a><a href="#projects">[Project Page]</a><a href="https://github.com/Zhan-Zhang-AI">[Code]</a></div>
+        </div>
+      </article>
+      <hr>
+    </section>
+
+    <section id="projects" class="bottom-section" aria-label="Projects">
+      <h2 class="section-title">Projects</h2>
+      <p>More research projects and open-source resources will be added here. See <a href="https://github.com/Zhan-Zhang-AI">GitHub</a>.</p>
+    </section>
+    <section id="awards" class="bottom-section" aria-label="Awards and services">
+      <h2 class="section-title">Awards and Services</h2>
+      <p>This section can list your awards, academic services, and CV.</p>
+    </section>
+    <footer>© <span id="year">2026</span> Zhan Zhang. Built with static HTML &amp; CSS and hosted on GitHub Pages.</footer>
+  </main>
+</body>
+</html>
